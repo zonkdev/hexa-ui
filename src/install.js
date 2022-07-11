@@ -1,10 +1,12 @@
-import HInput from "./components/HInput.vue";
-import HButton from "./components/HButton.vue";
+import NInput from "@/components/ui/Input.vue";
+import NButton from "@/components/ui/Button.vue";
+import NFormAction from "@/components/form/Action.vue";
 
 const HexaUi = {
   install(Vue) {
-    Vue.component("HInput", HInput);
-    Vue.component("HButton", HButton);
+    Vue.component("NInput", NInput);
+    Vue.component("NButton", NButton);
+    Vue.component("NFormAction", NFormAction);
   },
 };
 

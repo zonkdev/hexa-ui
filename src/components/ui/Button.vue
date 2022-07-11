@@ -1,28 +1,28 @@
 <template>
   <t-button
-    class="h-button"
+    class="n-button"
     v-bind="{ ...$props, ...$attrs }"
     v-on="$listeners"
   >
-    <span v-if="icon"><div :icon="icon" class="mr-1" /></span>
+    <span v-if="icon"><NIcon :icon="icon" class="mr-1" /></span>
     <span><slot></slot></span>
   </t-button>
 </template>
 
 <script>
 export default {
-   name: 'HButton',
+  name: "NButton",
   props: {
     icon: {
       type: String,
-      default: undefined
-    }
-  }
-}
+      default: undefined,
+    },
+  },
+};
 </script>
 
 <style lang="postcss" scoped>
-.h-button {
+.n-button {
   @apply inline-flex;
   @apply justify-center;
   @apply items-center;
@@ -32,6 +32,10 @@ export default {
 
   &:disabled {
     @apply cursor-not-allowed;
+  }
+
+  &:hover {
+    @apply cursor-pointer;
   }
 
   /* Size */

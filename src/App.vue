@@ -1,42 +1,84 @@
 <template>
-  <div id="app">
- <div class="pb-36">
-  <div class="max-w-md mx-auto my-10">
+  <div
+    id="app"
+    class="h-screen antialiased leading-none md:flex md:flex-cols md:items-center md:justify-center bg-gray-100"
+  >
+    <div class="pb-36 max-w-md mx-auto my-10">
+      <div class="flex gap-4 mb-4">
+        <NButton>Example</NButton>
+        <NButton class="primary">Example</NButton>
+        <NButton class="secondary">Example</NButton>
+        <NButton class="success">Example</NButton>
+        <NButton class="info">Example</NButton>
+        <NButton class="danger">Example</NButton>
+        <NButton class="outline">Example</NButton>
+      </div>
 
-   <div class="flex gap-4 mb-4">
-    <HButton>Example</HButton>
-     <HButton class="primary">Example</HButton>
-     <HButton class="secondary">Example</HButton>
-     <HButton class="success">Example</HButton>
-     <HButton class="info">Example</HButton>
-     <HButton class="danger">Example</HButton>
-     <HButton class="outline">Example</HButton>
+      <div class="flex gap-4 mb-4">
+        <NButton class="lg">Example</NButton>
+        <NButton class="md">Example</NButton>
+        <NButton class="sm">Example</NButton>
+      </div>
+
+      <div class="flex flex-col gap-y-2 mb-4">
+        <NInput placeholder="Input" />
+        <NInput prefix="Prefix" placeholder="Input" />
+        <NInput suffix="Suffix" placeholder="Input" />
+      </div>
+
+      <div class="flex flex-col gap-y-2 mb-4">
+        <NForm>
+          <NFormSection>
+            <NInputGroup label="Input">
+              <NInput placeholder="input ..." />
+            </NInputGroup>
+
+            <NInputGroup label="Input">
+              <NInput type="number" placeholder="input ..." />
+            </NInputGroup>
+          </NFormSection>
+
+          <NFormAction />
+        </NForm>
+      </div>
+
+      <div class="flex flex-row gap-x-2 mb-4">
+        <NIcon class="text-primary" />
+        <NIcon class="text-secondary" />
+        <NIcon class="text-danger" />
+      </div>
+
+      <div class="flex flex-row gap-x-2 mb-4">
+        <NIcon class="xs" />
+        <NIcon class="sm" />
+        <NIcon class="md" />
+        <NIcon class="lg" />
+        <NIcon class="xl" />
+        <NIcon class="xxl" />
+      </div>
     </div>
-
-     <div class="flex gap-4">
-    
-    <HButton class="lg">Example</HButton>
-    <HButton class="md">Example</HButton>
-    <HButton class="sm">Example</HButton>
-    </div>
-
-
-    </div>
-
-
-  </div>
   </div>
 </template>
 
 <script>
-import HButton from "./components/HButton.vue";
-// import HInput from "./components/HInput.vue";
+import NButton from "@/components/ui/Button.vue";
+import NInput from "@/components/ui/Input.vue";
+import NIcon from "@/components/ui/Icon.vue";
+import NInputGroup from "@/components/ui/InputGroup.vue";
+import NForm from "@/components/form/Form.vue";
+import NFormAction from "@/components/form/Action.vue";
+import NFormSection from "@/components/form/Section.vue";
 
 export default {
   name: "App",
   components: {
-    HButton,
-    // HInput,
+    NButton,
+    NInput,
+    NIcon,
+    NInputGroup,
+    NForm,
+    NFormAction,
+    NFormSection,
   },
 };
 </script>

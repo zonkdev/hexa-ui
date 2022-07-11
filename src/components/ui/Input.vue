@@ -1,6 +1,6 @@
 <template>
-  <div class="flex items-center h-input">
-    <div v-if="hasPrefix" class="h-input-prefix">
+  <div class="flex items-center n-input">
+    <div v-if="hasPrefix" class="n-input-prefix">
       {{ prefix }}
     </div>
     <t-input
@@ -12,7 +12,7 @@
       v-bind="{ ...$props, ...$attrs }"
       v-on="$listeners"
     />
-    <div v-if="hasSuffix" class="h-input-suffix">
+    <div v-if="hasSuffix" class="n-input-suffix">
       {{ suffix }}
     </div>
   </div>
@@ -20,7 +20,7 @@
 
 <script>
 export default {
-  name: 'HInput',
+  name: "NInput",
   inheritAttrs: false,
   props: {
     prefix: {
@@ -34,17 +34,17 @@ export default {
   },
   computed: {
     hasPrefix() {
-      return !!this.prefix
+      return !!this.prefix;
     },
     hasSuffix() {
-      return !!this.suffix
+      return !!this.suffix;
     },
   },
-}
+};
 </script>
 
 <style lang="postcss" scoped>
-.h-input {
+.n-input {
   &-prefix {
     @apply border border-r-0;
     @apply rounded-l;
