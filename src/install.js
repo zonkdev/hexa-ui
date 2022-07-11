@@ -7,6 +7,8 @@ import NForm from "@/components/form/Form.vue";
 import NFormSection from "@/components/form/Section.vue";
 import NFormInput from "@/components/form/Input.vue";
 
+import "@/assets/js/vue-tailwind.js";
+
 const HexaUi = {
   install(Vue) {
     Vue.component("NButton", NButton);
