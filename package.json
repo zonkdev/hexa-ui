@@ -1,7 +1,7 @@
 {
   "name": "hexa-ui",
   "description": "A simple admin ui template with tailwind",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": {
     "name": "Zonk Dev",
     "email": "zonkdev@yahoo.com"
