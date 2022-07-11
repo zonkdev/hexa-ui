@@ -1,13 +1,30 @@
 {
   "name": "hexa-ui",
+  "description": "A simple admin ui template with tailwind",
   "version": "0.1.0",
-  "private": true,
+  "author": {
+    "name": "Zonk Dev",
+    "email": "zonkdev@yahoo.com"
+  },
+  "repository": "https://github.com/zonkdev/hexa-ui",
+  "bugs": "https://github.com/zonkdev/hexa-ui/issues",
+  "keywords": [
+    "tailwind",
+    "ui",
+    "vue",
+    "admin"
+  ],
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "build-library": "vue-cli-service build --target lib --name hexa-ui ./src/install.js"
   },
+  "main": ".dist/hexa-ui.common.js",
   "dependencies": {
     "core-js": "^3.8.3",
     "vue": "^2.6.14"
