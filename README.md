@@ -1,4 +1,4 @@
-# vue-hello-world-simple
+# hexa-ui
 
 ## Project setup
 ```
