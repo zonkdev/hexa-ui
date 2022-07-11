@@ -37,7 +37,7 @@ export default {
 .n-input-group {
   @apply relative;
 
-  /deep/ &-feedback {
+  :deep() &-feedback {
     @apply absolute;
     @apply bottom-0;
     @apply text-xs;

@@ -12,7 +12,7 @@ export default {
 
 <style lang="postcss" scoped>
 .n-form {
-  /deep/ .n-form-section {
+  :deep() .n-form-section {
     @apply mt-8 md:mt-12;
 
     &:first-child {
