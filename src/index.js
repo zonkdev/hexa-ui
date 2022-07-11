@@ -1,7 +1,7 @@
 import HInput from "./components/HInput.vue";
 import HButton from "./components/HButton.vue";
 
-const Components = {
+const HexaUi = {
   install(Vue) {
     Vue.component("HInput", HInput);
     Vue.component("HButton", HButton);
@@ -9,7 +9,7 @@ const Components = {
 };
 
 if (typeof window !== "undefined" && window.Vue) {
-  window.Vue.use(Components);
+  window.Vue.use(HexaUi);
 }
 
-export default Components;
+export default HexaUi;
