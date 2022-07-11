@@ -1,9 +1,9 @@
 <template>
-  <div class="flex items-center n-input">
-    <div v-if="hasPrefix" class="n-input-prefix">
+  <div class="flex items-center h-input">
+    <div v-if="hasPrefix" class="h-input-prefix">
       {{ prefix }}
     </div>
-    <input
+    <t-input
       class="w-full border-t border-b outline-none text-gray-dark border-gray-light focus:border-gray-400"
       :class="{
         'border-l rounded-l': !hasPrefix,
@@ -12,7 +12,7 @@
       v-bind="{ ...$props, ...$attrs }"
       v-on="$listeners"
     />
-    <div v-if="hasSuffix" class="n-input-suffix">
+    <div v-if="hasSuffix" class="h-input-suffix">
       {{ suffix }}
     </div>
   </div>
@@ -20,7 +20,7 @@
 
 <script>
 export default {
-  name: "NInput",
+  name: 'HInput',
   inheritAttrs: false,
   props: {
     prefix: {
@@ -34,11 +34,46 @@ export default {
   },
   computed: {
     hasPrefix() {
-      return !!this.prefix;
+      return !!this.prefix
     },
     hasSuffix() {
-      return !!this.suffix;
+      return !!this.suffix
     },
   },
-};
+}
 </script>
+
+<style lang="postcss" scoped>
+.h-input {
+  &-prefix {
+    @apply border border-r-0;
+    @apply rounded-l;
+  }
+  &-suffix {
+    @apply border border-l-0;
+    @apply rounded-r;
+  }
+  &-prefix,
+  &-suffix {
+    @apply text-xs text-gray-500;
+    @apply border-gray-light;
+    @apply bg-app-light;
+  }
+  &-prefix,
+  &-suffix,
+  input {
+    @apply px-3;
+    @apply py-0;
+    line-height: 2.5rem;
+
+    box-shadow: inherit;
+    /* -webkit-box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.04);
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.04); */
+  }
+
+  & :disabled {
+    cursor: not-allowed;
+    background-color: #f8f8f8;
+  }
+}
+</style>
