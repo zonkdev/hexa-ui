@@ -1,11 +1,11 @@
-import NButton from "@/components/ui/Button.vue";
-import NInput from "@/components/ui/Input.vue";
-import NInputGroup from "@/components/ui/InputGroup.vue";
-import NIcon from "@/components/ui/Icon.vue";
-import NFormAction from "@/components/form/Action.vue";
-import NForm from "@/components/form/Form.vue";
-import NFormSection from "@/components/form/Section.vue";
-import NFormInput from "@/components/form/Input.vue";
+import NButton from "@/components/NButton.vue";
+import NInput from "@/components/NInput.vue";
+import NInputGroup from "@/components/NInputGroup.vue";
+import NIcon from "@/components/NIcon.vue";
+import NFormAction from "@/components/NForm/NFormAction.vue";
+import NForm from "@/components/NForm/NForm.vue";
+import NFormSection from "@/components/NForm/NFormSection.vue";
+import NFormInput from "@/components/NForm/NFormInput.vue";
 
 const HexaUi = {
   install(Vue) {

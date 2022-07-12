@@ -61,13 +61,13 @@
 </template>
 
 <script>
-import NButton from "@/components/ui/Button.vue";
-import NInput from "@/components/ui/Input.vue";
-import NIcon from "@/components/ui/Icon.vue";
-import NInputGroup from "@/components/ui/InputGroup.vue";
-import NForm from "@/components/form/Form.vue";
-import NFormAction from "@/components/form/Action.vue";
-import NFormSection from "@/components/form/Section.vue";
+import NButton from "@/components/NButton.vue";
+import NInput from "@/components/NInput.vue";
+import NIcon from "@/components/NIcon.vue";
+import NInputGroup from "@/components/NInputGroup.vue";
+import NForm from "@/components/NForm/NForm.vue";
+import NFormAction from "@/components/NForm/NFormAction.vue";
+import NFormSection from "@/components/NForm/NFormSection.vue";
 
 export default {
   name: "App",

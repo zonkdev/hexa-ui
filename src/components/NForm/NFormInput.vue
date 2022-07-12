@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import NInput from "@/components/ui/Input.vue";
+import NInput from "@/components/NInput.vue";
 
 export default {
   components: {

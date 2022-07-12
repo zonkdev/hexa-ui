@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import NButton from "@/components/ui/Button.vue";
+import NButton from "@/components/NButton.vue";
 
 export default {
   name: "NFormAction",

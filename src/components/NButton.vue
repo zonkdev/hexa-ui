@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import NIcon from "@/components/ui/Icon.vue";
+import NIcon from "@/components/NIcon.vue";
 
 export default {
   name: "NButton",
