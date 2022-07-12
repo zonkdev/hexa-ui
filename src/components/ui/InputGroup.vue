@@ -1,22 +1,17 @@
 <template>
-  <TInputGroup
+  <t-input-group
     class="n-input-group"
     :classes="classes"
     v-bind="{ ...$props, ...$attrs }"
     v-on="$listeners"
   >
     <slot></slot>
-  </TInputGroup>
+  </t-input-group>
 </template>
 
 <script>
-import { TInputGroup } from "vue-tailwind/dist/components";
-
 export default {
   name: "NInputGroup",
-  components: {
-    TInputGroup: TInputGroup,
-  },
   props: {
     validator: {
       type: Object,

@@ -2,6 +2,7 @@ import Vue from "vue";
 import App from "@/App.vue";
 
 import "@/assets/css/main.css";
+import "@/assets/js/vue-tailwind.js";
 
 Vue.config.productionTip = false;
 
