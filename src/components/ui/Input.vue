@@ -3,7 +3,7 @@
     <div v-if="hasPrefix" class="n-input-prefix">
       {{ prefix }}
     </div>
-    <t-input
+    <TInput
       class="w-full border-t border-b outline-none text-gray-dark border-gray-light focus:border-gray-400"
       :class="{
         'border-l rounded-l': !hasPrefix,
@@ -19,8 +19,13 @@
 </template>
 
 <script>
+import TInput from "vue-tailwind/dist/t-input";
+
 export default {
   name: "NInput",
+  components: {
+    TInput: TInput,
+  },
   inheritAttrs: false,
   props: {
     prefix: {

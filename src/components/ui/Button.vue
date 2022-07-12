@@ -1,17 +1,20 @@
 <template>
-  <t-button
-    class="n-button"
-    v-bind="{ ...$props, ...$attrs }"
-    v-on="$listeners"
-  >
+  <TButton class="n-button" v-bind="{ ...$props, ...$attrs }" v-on="$listeners">
     <span v-if="icon"><NIcon :icon="icon" class="mr-1" /></span>
     <span><slot></slot></span>
-  </t-button>
+  </TButton>
 </template>
 
 <script>
+import NIcon from "@/components/ui/Icon.vue";
+import TButton from "vue-tailwind/dist/t-button";
+
 export default {
   name: "NButton",
+  components: {
+    NIcon,
+    TButton: TButton,
+  },
   props: {
     icon: {
       type: String,
