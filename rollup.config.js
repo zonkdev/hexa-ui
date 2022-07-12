@@ -7,6 +7,7 @@ import packageJson from "./package.json";
 
 export default {
   input: "src/index.js",
+  external: ["overlayscrollbars", "overlayscrollbars-vue"],
   output: [
     {
       format: "cjs",
