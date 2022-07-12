@@ -69,8 +69,12 @@ import VueTailwind from "vue-tailwind/dist/full";
 
 const settings = {
   TInputGroup: {},
-  TInput: {},
-  TButton: {},
+  TInput: {
+    classes: {},
+  },
+  TButton: {
+    classes: {},
+  },
 };
 
 Vue.use(VueTailwind, settings);

@@ -6,6 +6,4 @@ import "@/assets/js/vue-tailwind.js";
 
 Vue.config.productionTip = false;
 
-new Vue({
-  render: (h) => h(App),
-}).$mount("#app");
+new Vue({ render: (createElement) => createElement(App) }).$mount("#app");

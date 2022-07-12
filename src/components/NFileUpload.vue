@@ -27,7 +27,7 @@
         'border-t border-b': files.length,
       }"
     >
-      <overlay-scrollbars
+      <NOverlayScrollbar
         v-if="files.length"
         :options="{ scrollbars: { autoHide: 'scroll' } }"
         class="h-52"
@@ -77,7 +77,7 @@
             </div>
           </div>
         </draggable>
-      </overlay-scrollbars>
+      </NOverlayScrollbar>
       <div v-else>
         <div
           class="flex content-center items-center text-xs text-center cursor-pointer h-44"
@@ -143,10 +143,9 @@
 </template>
 
 <script>
-import "overlayscrollbars/css/OverlayScrollbars.css";
-import { OverlayScrollbarsComponent } from "overlayscrollbars-vue";
 import draggable from "vuedraggable";
 import FileUpload from "vue-upload-component";
+import NOverlayScrollbar from "@/components/NOverlayScrollbar.vue";
 import NButton from "@/components/NButton.vue";
 import NIcon from "@/components/NIcon.vue";
 
@@ -158,7 +157,7 @@ export default {
     FileUpload,
     NButton,
     NIcon,
-    OverlayScrollbars: OverlayScrollbarsComponent,
+    NOverlayScrollbar,
   },
   data: () => ({
     files: [],
