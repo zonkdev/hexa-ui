@@ -7,7 +7,7 @@
 
 <script>
 import NIcon from "@/components/ui/Icon.vue";
-import TButton from "vue-tailwind/dist/t-button";
+import { TButton } from "vue-tailwind/dist/components";
 
 export default {
   name: "NButton",

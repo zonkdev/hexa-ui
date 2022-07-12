@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import TInputGroup from "vue-tailwind/dist/t-input-group";
+import { TInputGroup } from "vue-tailwind/dist/components";
 
 export default {
   name: "NInputGroup",

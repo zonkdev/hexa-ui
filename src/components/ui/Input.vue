@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import TInput from "vue-tailwind/dist/t-input";
+import { TInput } from "vue-tailwind/dist/components";
 
 export default {
   name: "NInput",
