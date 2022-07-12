@@ -25,7 +25,8 @@
     "build-lib": "rollup -c",
     "build-library": "vue-cli-service build --target lib --name hexa-ui ./src/install.js"
   },
-  "main": "dist/hexa-ui.common.js",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
   "dependencies": {
     "core-js": "^3.8.3",
     "overlayscrollbars": "^1.13.1",
@@ -38,6 +39,8 @@
   "devDependencies": {
     "@babel/core": "^7.12.16",
     "@babel/eslint-parser": "^7.12.16",
+    "@rollup/plugin-commonjs": "^22.0.1",
+    "@rollup/plugin-node-resolve": "^13.3.0",
     "@tailwindcss/aspect-ratio": "^0.4.0",
     "@tailwindcss/forms": "^0.5.2",
     "@tailwindcss/line-clamp": "^0.4.0",
