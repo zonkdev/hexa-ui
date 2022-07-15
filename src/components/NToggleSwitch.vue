@@ -19,14 +19,7 @@ export default {
 <style>
 .n-toggle-switch {
   & .v-switch-core {
-    /* @apply border border-gray-light !important;
-    @apply bg-white !important;
-    @apply text-white !important; */
     @apply bg-gray-300 !important;
-
-    & .v-switch-button {
-      /* @apply bg-gray-400 !important; */
-    }
   }
 
   &.toggled {
