@@ -119,7 +119,7 @@ import NIconHome from "@/components/NIcon/NIconHome.vue";
 // import NIconTruck from "@/components/NIcon/NIconTruck";
 // import NIconScan from "@/components/NIcon/NIconScan";
 // import NIconCategory from "@/components/NIcon/NIconCategory";
-import NIconUsers from "@/components/NIcon/NIconUsers";
+import NIconUsers from "@/components/NIcon/NIconUsers.vue";
 // import NIconChart from "@/components/NIcon/NIconChart";
 // import NIconSetting from "@/components/NIcon/NIconSetting";
 // import NIconSearch from "@/components/NIcon/NIconSearch";
