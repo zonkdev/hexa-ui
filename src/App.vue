@@ -1,7 +1,7 @@
 <template>
   <div
     id="app"
-    class="antialiased leading-none md:flex md:flex-cols md:items-center md:justify-center bg-gray-100"
+    class="antialiased leading-none md:flex md:flex-cols md:items-center md:justify-center bg-white"
   >
     <div class="pb-36 mx-auto my-10">
       <div class="flex flex-row gap-x-2 mb-4">
@@ -201,9 +201,26 @@
               <NToggleSwitch
                 class="secondary"
                 :labels="{ checked: 'Yes', unchecked: 'No' }"
+                :sync="true"
                 v-model="form.isPublic"
               />
             </NInputGroup>
+
+            <NInputGroup label="Categories">
+              <NCheckbox
+                v-for="(item, index) in categories"
+                :label="item"
+                :key="index"
+                :value="item"
+                v-model="form.categories"
+              />
+            </NInputGroup>
+
+            <NCheckbox
+              label="isPublic"
+              :value="false"
+              v-model="form.isPublic"
+            />
 
             <NInputGroup label="Media">
               <NFileUpload
@@ -232,6 +249,7 @@ import {
   NToggleButton,
   NToggleSwitch,
   NButton,
+  NCheckbox,
   NColumn,
   NInput,
   NInputCurrency,
@@ -254,6 +272,7 @@ export default {
     tag: "",
     categories: ["Category 1", "Category 2", "Category 3"],
     form: {
+      categories: ["Category 1", "Category 2", "Category 3"],
       title: "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       description:
         "Cupiditate cumque quidem vitae ad est libero vel suscipit laboriosam beatae, ex perferendis aliquid nobis qui, quam veniam facere",
@@ -290,6 +309,13 @@ export default {
       alert(JSON.stringify(event));
     },
   },
+  mounted() {
+    const _this = this;
+    setTimeout(function () {
+      _this.form.isPublic = true;
+      _this.form.enableDiscount = "on";
+    }, 4000);
+  },
   components: {
     NAvatar,
     NBadge,
@@ -297,6 +323,7 @@ export default {
     NToggleButton,
     NToggleSwitch,
     NButton,
+    NCheckbox,
     NColumn,
     NInput,
     NInputCurrency,

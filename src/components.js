@@ -2,6 +2,7 @@ import NAvatar from "./components/NAvatar.vue";
 import NBadge from "./components/NBadge.vue";
 import NBullet from "./components/NBullet.vue";
 import NButton from "./components/NButton.vue";
+import NCheckbox from "./components/NCheckbox.vue";
 import NToggleButton from "./components/NToggleButton.vue";
 import NToggleSwitch from "./components/NToggleSwitch.vue";
 import NColumn from "./components/NColumn.vue";
@@ -25,6 +26,7 @@ export {
   NAvatar,
   NBadge,
   NBullet,
+  NCheckbox,
   NToggleButton,
   NToggleSwitch,
   NButton,

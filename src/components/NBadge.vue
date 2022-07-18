@@ -30,7 +30,7 @@ export default {
   }
 
   /* Color  */
-  @apply bg-gray-400;
+  @apply bg-gray-300;
   @apply text-white;
 
   &.primary {
