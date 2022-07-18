@@ -1,6 +1,6 @@
 <template>
-  <label class="wrapper flex items-center">
-    {{ label }}
+  <label class="n-checkbox flex items-center">
+    <span v-if="label">{{ label }}</span>
     <input
       class="checkbox"
       type="checkbox"
@@ -28,7 +28,7 @@ export default {
     },
     label: {
       type: String,
-      required: true,
+      default: undefined,
     },
     trueValue: {
       default: true,
@@ -36,9 +36,17 @@ export default {
     falseValue: {
       default: false,
     },
+    checked: {
+      type: [Boolean, String],
+      default: false,
+    },
   },
   computed: {
     isChecked() {
+      if (String(this.checked) === "true") {
+        return true;
+      }
+
       if (this.modelValue instanceof Array) {
         return this.modelValue.includes(this.value);
       }
@@ -66,59 +74,111 @@ export default {
 </script>
 
 <style scoped>
-/* Customize the label (the wrapper) */
-.wrapper {
-  display: block;
+.n-checkbox {
+  display: inline-block;
   position: relative;
-  padding-left: 35px;
+  padding-left: 30px;
   margin-bottom: 6px;
+  white-space: nowrap;
   cursor: pointer;
-  font-size: 22px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  font-size: 16px;
 }
-/* Hide the browser's default checkbox */
-.wrapper input {
+.n-checkbox input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
+  vertical-align: middle;
   height: 0;
   width: 0;
 }
-/* Create a custom checkbox */
-.checkmark {
+
+.n-checkbox .checkmark {
   position: absolute;
   top: 0;
   left: 0;
   height: 21px;
   width: 21px;
-  border-radius: 2px;
-  background-color: #eee;
-  border: 1px solid #ccc;
+  @apply rounded;
+  @apply bg-white;
+  @apply border border-gray-light;
 }
-/* On mouse-over, add a grey background color */
-.wrapper:hover input ~ .checkmark {
-  background-color: #ccc;
+
+.n-checkbox:hover input ~ .checkmark {
+  @apply bg-gray-100;
 }
-/* When the checkbox is checked, add a blue background */
-.wrapper input:checked ~ .checkmark {
-  background-color: #1cd4a7;
+
+.n-checkbox input:checked ~ .checkmark {
+  @apply bg-gray-400;
 }
-/* Create the checkmark/indicator (hidden when not checked) */
-.checkmark:after {
+
+.n-checkbox:hover input:checked ~ .checkmark {
+  @apply bg-gray-500;
+}
+
+.n-checkbox.primary {
+  & input:checked ~ .checkmark {
+    @apply bg-primary border-primary-semi;
+  }
+
+  &:hover input:checked ~ .checkmark {
+    @apply bg-primary-dark;
+  }
+}
+
+.n-checkbox.secondary {
+  & input:checked ~ .checkmark {
+    @apply bg-secondary border-secondary-semi;
+  }
+
+  &:hover input:checked ~ .checkmark {
+    @apply bg-secondary-dark;
+  }
+}
+
+.n-checkbox.success {
+  & input:checked ~ .checkmark {
+    @apply bg-success border-success-semi;
+  }
+
+  &:hover input:checked ~ .checkmark {
+    @apply bg-success-dark;
+  }
+}
+
+.n-checkbox.info {
+  & input:checked ~ .checkmark {
+    @apply bg-info border-info-semi;
+  }
+
+  &:hover input:checked ~ .checkmark {
+    @apply bg-info-dark;
+  }
+}
+
+.n-checkbox.danger {
+  & input:checked ~ .checkmark {
+    @apply bg-danger border-danger-semi;
+  }
+
+  &:hover input:checked ~ .checkmark {
+    @apply bg-danger-dark;
+  }
+}
+
+.n-checkbox .checkmark:after {
   content: "";
   position: absolute;
   display: none;
 }
-/* Show the checkmark when checked */
-.wrapper input:checked ~ .checkmark:after {
+
+.n-checkbox input:checked ~ .checkmark:after {
   display: block;
 }
-/* Style the checkmark/indicator */
-.wrapper .checkmark:after {
+
+.n-checkbox .checkmark:after {
   left: 7px;
   top: 0px;
   width: 7px;

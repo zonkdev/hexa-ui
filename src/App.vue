@@ -66,6 +66,15 @@
         <NToggleSwitch :labels="true" :value="true" class="danger" />
       </div>
 
+      <div class="flex gap-4 mb-4">
+        <NCheckbox label="Label" checked />
+        <NCheckbox label="Label" checked class="primary" />
+        <NCheckbox label="Label" checked class="secondary" />
+        <NCheckbox label="Label" checked class="success" />
+        <NCheckbox label="Label" checked class="info" />
+        <NCheckbox label="Label" checked class="danger" />
+      </div>
+
       <div class="flex flex-row gap-x-4 mb-4">
         <NBullet class="text-primary sm" />
         <NBullet class="text-secondary md" />
@@ -207,20 +216,17 @@
             </NInputGroup>
 
             <NInputGroup label="Categories">
-              <NCheckbox
-                v-for="(item, index) in categories"
-                :label="item"
-                :key="index"
-                :value="item"
-                v-model="form.categories"
-              />
+              <div class="flex flex-col gap-y-2">
+                <NCheckbox
+                  class="secondary"
+                  v-for="(item, index) in categories"
+                  :label="item"
+                  :key="index"
+                  :value="item"
+                  v-model="form.categories"
+                />
+              </div>
             </NInputGroup>
-
-            <NCheckbox
-              label="isPublic"
-              :value="false"
-              v-model="form.isPublic"
-            />
 
             <NInputGroup label="Media">
               <NFileUpload

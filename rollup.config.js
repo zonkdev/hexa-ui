@@ -22,11 +22,11 @@ const globals = {
 };
 
 const postcssPlugins = [
+  require("tailwindcss/nesting"),
+  require("postcss-simple-vars"),
   require("postcss-import"),
-  require("@tailwindcss/nesting"),
   require("tailwindcss"),
   require("autoprefixer"),
-  require("postcss-simple-vars"),
 ];
 
 const vueConfig = {
